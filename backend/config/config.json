@@ -1,0 +1,42 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Password@123#123",
+    "database": "dispatchA",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "developmentClone": {
+    "user": "root",
+    "password": "Password@123#123",
+    "database": "dispatchA",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "httpCodes": {
+    "internalServerError": 500,
+    "notFound": 404,
+    "success": 200,
+    "badRequest": 400
+  },
+  "httpColorCodes": {
+    "internalServerError": 31,
+    "badRequest": 33,
+    "multipleChoices": 36,
+    "success": 32
+  }
+}
