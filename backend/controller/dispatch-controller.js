@@ -9,6 +9,7 @@ const {
 exports.createDispatch = (req, res) => {
   var data = req.body;
 
+  console.log(req.body, "this is data------->");
   var responseData = {
     success: false,
     msg: "invalid params",
@@ -27,11 +28,16 @@ exports.createDispatch = (req, res) => {
     createDispatchModel(data, (err, result) => {
       if (err) {
         console.log(err);
-        responseData.msg = "something went wrong";
+        if ((err.code = "ER_DUP_ENTRY")) {
+          responseData.msg = "Duplicate Entry";
+        } else {
+          responseData.msg = "something went wrong";
+        }
         return res.status(httpCodes.internalServerError).send(responseData);
       }
 
       responseData.msg = "successfully created dispatch";
+      responseData.success = true;
       responseData.data = result;
       return res.status(httpCodes.success).send(responseData);
     });

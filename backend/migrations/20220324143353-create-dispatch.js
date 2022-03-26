@@ -69,7 +69,6 @@ module.exports = {
         validate: {
           is: [
             "^[A-HJ-NPR-Za-hj-npr-zd]{8}[dX][A-HJ-NPR-Za-hj-npr-zd]{2}d{6}$",
-            "i",
           ],
           msg: "Must valid VIN",
         },
